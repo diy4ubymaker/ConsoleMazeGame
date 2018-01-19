@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{088AE6C5-75A6-4C19-9173-762E0637CD4E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleMazeGame</RootNamespace>
+    <AssemblyName>ConsoleMazeGame</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameEngine\GameDataFactory.cs" />
+    <Compile Include="GameEngine\GameInfo\GameBattleIndicator.cs" />
+    <Compile Include="GameEngine\GameInfo\GameRoom.cs" />
+    <Compile Include="GameEngine\GameInfo\GameWorldInfo.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\HealthPotion.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\IGiveLife.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\Silver.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\Key.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\Ghest.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\Gold.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ICarryable.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\IDropable.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ITakable.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\WoodenArmour.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\IronArmour.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\WoodenSword.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\IronSword.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\ItemList.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\ItemObject\Item.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\IUsable.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\IShield.cs" />
+    <Compile Include="GameEngine\GameInfo\Items\IWeapon.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\Enemy.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\Globin.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\IAvailable.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\IHasPrice.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\ILivingOrganism.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\IMovable.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\IStationary.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\Monster.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\Player.cs" />
+    <Compile Include="GameEngine\GameInfo\Roles\IPrintable.cs" />
+    <Compile Include="GameEngine\GameItemHandler.cs" />
+    <Compile Include="GameEngine\GameMaps\BoundaryPoint.cs" />
+    <Compile Include="GameEngine\GameMaps\RoomInfoFileReader.cs" />
+    <Compile Include="GameEngine\GameMaps\RoomMap.cs" />
+    <Compile Include="GameEngine\GameMaps\RoomMapFileInfo.cs" />
+    <Compile Include="GameEngine\GameMaps\WorldMap.cs" />
+    <Compile Include="GameEngine\GameMaps\RoomMapFileReader.cs" />
+    <Compile Include="GameEngine\GameMaps\WorldMapFileReader.cs" />
+    <Compile Include="GameEngine\GamePhases\GamePhaseCredits.cs" />
+    <Compile Include="GameEngine\GamePhases\GamePhaseDIY4ULogo.cs" />
+    <Compile Include="GameEngine\GamePhases\GamePhaseGameOver.cs" />
+    <Compile Include="GameEngine\GamePhases\GamePhasePlay.cs" />
+    <Compile Include="GameEngine\GameInfo\GameState.cs" />
+    <Compile Include="GameEngine\GameSearch\RoomMapSearchResult.cs" />
+    <Compile Include="GameEngine\GameStateManager.cs" />
+    <Compile Include="GameEngine\GameInfo\GameStateTable.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\PercentageBarEx1.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\PercentageBar.cs" />
+    <Compile Include="GameScreenLib\Screens\PlayUILeftPanel.cs" />
+    <Compile Include="GameScreenLib\Screens\PlayUIRightPanel.cs" />
+    <Compile Include="GameScreenLib\Screens\PlayUITopItem.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\Border.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\MapBox.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\MenuTextBox.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\MultiLineTextBox.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\Rectangle.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\Shapes.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\TextBox.cs" />
+    <Compile Include="GameScreenLib\Screens\Elements\ThreeColumnRectangle.cs" />
+    <Compile Include="GameScreenLib\Screens\PlayUIBottomItem.cs" />
+    <Compile Include="GameScreenLib\Screens\PlayUIWorldMap.cs" />
+    <Compile Include="MainGame.cs" />
+    <Compile Include="Managers\ConfigManager.cs" />
+    <Compile Include="Managers\ScreenManager.cs" />
+    <Compile Include="Managers\SoundManager.cs" />
+    <Compile Include="Managers\SystemManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Utility.cs" />
+    <Compile Include="Utilities\WindowsAPI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\DIY4U.txt" />
+    <Content Include="Resources\Room1.txt" />
+    <Content Include="Resources\Room1a.txt" />
+    <Content Include="Resources\Room2.txt" />
+    <Content Include="Resources\Room2a.txt" />
+    <Content Include="Resources\Room3.txt" />
+    <Content Include="Resources\Room3a.txt" />
+    <Content Include="Resources\Room4.txt" />
+    <Content Include="Resources\Room4a.txt" />
+    <Content Include="Resources\SampleWorldMap1.txt" />
+    <Content Include="Resources\PowerUp.wav" />
+    <Content Include="Resources\WorldMap.txt" />
+    <Content Include="Resources\WorldRoomInfo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rd /s /q  "$(TargetDir)\Resources"
+mkdir "$(TargetDir)\Resources"
+xcopy /S /E /Y /H "$(ProjectDir)\Resources" "$(TargetDir)\Resources"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>rd /s /q  "$(TargetDir)\Resources"
+mkdir "$(TargetDir)\Resources"
+xcopy /S /E /Y /H "$(ProjectDir)\Resources" "$(TargetDir)\Resources"</PreBuildEvent>
+  </PropertyGroup>
+</Project>
