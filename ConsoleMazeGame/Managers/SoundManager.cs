@@ -31,7 +31,6 @@ namespace DIY4UMazeGame.Managers
             if (!isInit)
             {
 
-                //defaultSndPlayer = new SoundPlayer(@"Resources\PowerUp.wav");
                 defaultSndPlayer = new SoundPlayer(ConfigManager.DefaultSound);
 
                 isInit = true;

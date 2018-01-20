@@ -57,17 +57,11 @@ namespace DIY4UMazeGame.GameScreenLib.Screens
         public static TextBox WeaponTypeValLabel { get; set; } = null;
         public static string WeaponTypeValStr = "Wooden Sword";
 
-        //public static TextBox WeaponTypePowerValLabel { get; set; } = null;
-        //public static int WeaponTypePowerVal = 100;
-
         public static TextBox ArmourTypeLabel { get; set; } = null;
         public static string  ArmourTypeStr = "Armour Type";
 
         public static TextBox ArmourTypeValLabel { get; set; } = null;
         public static string ArmourTypeValStr = "Wooden";
-
-        //public static TextBox ArmourTypePowerValLabel { get; set; } = null;
-        //public static int ArmourTypePowerVal = 100;
 
         public static PercentageBar WeaponBar { get; set; } = null;
         public static PercentageBar ArmourBar { get; set; } = null;
@@ -105,15 +99,11 @@ namespace DIY4UMazeGame.GameScreenLib.Screens
                 TotalEnemyLabel.draw();
                 TotalMonsterWLabel.draw();
                 TotalGlobinWLabel.draw();
-                WeaponTypeValLabel.draw();
-                //WeaponTypePowerValLabel.draw();
+                WeaponTypeValLabel.draw();    
                 ArmourTypeValLabel.draw();
-                //ArmourTypePowerValLabel.draw();
                 WeaponBar.draw();
                 ArmourBar.draw();
-                //Updatable
-
-
+         
         }
 
 
